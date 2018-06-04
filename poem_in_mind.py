@@ -7,7 +7,10 @@ app = Flask(__name__)
 def hello() -> str:
     return 'hello now'
 
-
+@app.route('/entry')
+def entry_page() -> 'html':
+    return render_template('entry.html',
+                           the_title='welcome to poetry extreme')
 
 
 
